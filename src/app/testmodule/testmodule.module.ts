@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipemoduleModule } from '../pipemodule/pipemodule.module';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormbasicsComponent } from './formbasics/formbasics.component';
 @NgModule({
-  declarations: [TestcompComponent],
+  declarations: [TestcompComponent, FormbasicsComponent],
   imports: [
     CommonModule,
     FormsModule,
