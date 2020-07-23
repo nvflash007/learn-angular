@@ -1,0 +1,25 @@
+<h1 class={{classis}}>Look at me</h1>
+<!-- <p *ngIf="flag; then thenblock else elseblock">Flag is true</p> -->
+<article [ngSwitch]="flag">
+    <p *ngSwitchCase="'true'">True</p>
+    <p *ngSwitchCase="'false'">False</p>
+    <p *ngSwitchDefault>Invalid Case</p>
+</article>
+<button (click)="onButtonClick()">Click Me</button>
+<ul *ngFor="let name of names; let i = index; let e = even; let o = odd; trackBy:trackByIndex">
+    <li [ngStyle]="{'text-transform': e ? 'uppercase': 'lowercase'}" [ngClass]="{'fortrue': e, 'forfalse': o}">{{i + 1}}.) {{name | gender}} => {{e}} {{o}}</li>
+</ul>
+<button (click)="getMoreNames()">Get More Names</button><br><br><br>
+<label name="name">Name : </label>
+<input type="text" [(ngModel)]='data'>
+<h1>{{data}}</h1>
+<a [routerLink]="['/test']">Test Link</a><br>
+<button (click)="home()">Go Home</button>
+
+<!-- <ng-template #elseblock>
+    <p>Flag is flase</p>
+</ng-template>
+<ng-template #thenblock>
+    <p>Flag is true using then block</p>
+</ng-template> -->
+

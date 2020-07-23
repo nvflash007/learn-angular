@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Inject } from '@angular/core';
+import { TestserviceService } from './testservice.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myapp';
+  constructor(@Inject(TestserviceService) testserviceService) {
+    console.log(testserviceService);
+  }
 }
